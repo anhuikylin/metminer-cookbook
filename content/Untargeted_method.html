@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MetMiner Cookbook - Customize</title>
+<title>MetMiner Cookbook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../content/customizing.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../content/pre_targeted.html" rel="next">
+<link href="../content/Upstream_method.html" rel="prev">
 <link href="../images/favicon.ico" rel="icon">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -83,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/add-content.html">Add content</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/Upstream_method.html">Upstream data processing</a></li><li class="breadcrumb-item"><a href="../content/Untargeted_method.html">Untargeted method</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -98,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="https://raw.githubusercontent.com/nmfs-opensci/assets/main/logo/nmfs-opensci-logo3.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="https://github.com/ShawnWx2019/metminer-cookbook/blob/main/metminer_icon.jpeg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://shawnwx2019.github.io/" title="Shawn learn bioinformatics" class="quarto-navigation-tool px-1" aria-label="Shawn learn bioinformatics"><i class="bi bi-globe"></i></a>
@@ -116,43 +116,118 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Home</span></a>
+ <span class="menu-text">About</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/add-content.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Add content</span></a>
+  <a href="../content/installation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Installation</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Upstream data processing</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/customizing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Customizing</span></a>
+  <a href="../content/Upstream_method.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/rendering.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Rendering</span></a>
+  <a href="../content/Untargeted_method.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Untargeted method</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/rmarkdown.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R Markdown files</span></a>
+  <a href="../content/pre_targeted.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pseudotargeted method</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">Downstream data processing</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Code in your files</span></a>
+  <a href="../content/Downstream_method.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/feature_anno.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feature annotation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/feature_dedup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Feature deduplication</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/feature_class.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Classification</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/enrich.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Enrichment analysis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/dam.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DAM analysis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">Data mining</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/Datamining_method.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/iWGCNA.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">iterative WGCNA</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../content/acknowledgements.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Acknowledgements</span></a>
+  <a href="../content/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
     </ul>
@@ -165,51 +240,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#edit-and-add-your-pages" id="toc-edit-and-add-your-pages" class="nav-link active" data-scroll-target="#edit-and-add-your-pages">Edit and add your pages</a></li>
-  <li><a href="#add-your-pages-the-project" id="toc-add-your-pages-the-project" class="nav-link" data-scroll-target="#add-your-pages-the-project">Add your pages the project</a></li>
+  <li><a href="#untargeted-metabolomics-data-process." id="toc-untargeted-metabolomics-data-process." class="nav-link active" data-scroll-target="#untargeted-metabolomics-data-process.">Untargeted metabolomics data process.</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/edit/main/content/add-content.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/blob/main/content/add-content.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/edit/main/content/Untargeted_method.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/blob/main/content/Untargeted_method.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Customize</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="edit-and-add-your-pages" class="level2">
-<h2 class="anchored" data-anchor-id="edit-and-add-your-pages">Edit and add your pages</h2>
-<p>Edit the qmd or md files in the <code>content</code> folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).</p>
-<p>Each page should start with</p>
-<pre><code>---
-title: your title
----</code></pre>
-<p>and the first header will be the 2nd level, so <code>##</code>. Note, there are situations where you leave off</p>
-<pre><code>---
-title: your title
----</code></pre>
-<p>and start the qmd file with a level header <code>#</code>, but if using the default title yaml (in the <code>---</code> fence) is a good habit since it makes it easy for Quarto convert your qmd file to other formats (like into a presentation).</p>
-</section>
-<section id="add-your-pages-the-project" class="level2">
-<h2 class="anchored" data-anchor-id="add-your-pages-the-project">Add your pages the project</h2>
-<ul>
-<li>Add the files to <code>_quarto.yml</code></li>
-</ul>
+<section id="untargeted-metabolomics-data-process." class="level1">
+<h1>Untargeted metabolomics data process.</h1>
 
 
 </section>
@@ -748,13 +790,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link  aria-label=" home"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Home</span>
+      <a href="../content/Upstream_method.html" class="pagination-link  aria-label=" introduction"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../content/customizing.html" class="pagination-link" aria-label="Customizing">
-        <span class="nav-page-text">Customizing</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../content/pre_targeted.html" class="pagination-link" aria-label="Pseudotargeted  method">
+        <span class="nav-page-text">Pseudotargeted method</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -766,9 +808,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/edit/main/content/add-content.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/blob/main/content/add-content.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/edit/main/content/Untargeted_method.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/blob/main/content/Untargeted_method.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
-<p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
+<p>This page is built with <a href="https://quarto.org/">Quarto</a>.Template: <a href="https://github.com/nmfs-opensci/NOAA-quarto-simple">NOAA-quarto-simple</a></p>
 </div>
   </div>
 </footer>

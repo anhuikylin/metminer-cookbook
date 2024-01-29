@@ -1,35 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/acknowledgements.html</loc>
-    <lastmod>2024-01-29T04:35:23.915Z</lastmod>
+    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/dam.html</loc>
+    <lastmod>2024-01-29T10:49:09.368Z</lastmod>
   </url>
   <url>
-    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/rmarkdown.html</loc>
-    <lastmod>2024-01-29T04:35:23.919Z</lastmod>
+    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/Datamining_method.html</loc>
+    <lastmod>2024-01-29T10:49:09.368Z</lastmod>
   </url>
   <url>
-    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/add-content.html</loc>
-    <lastmod>2024-01-29T04:35:23.919Z</lastmod>
+    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/installation.html</loc>
+    <lastmod>2024-01-29T10:49:09.368Z</lastmod>
   </url>
   <url>
-    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/code.html</loc>
-    <lastmod>2024-01-29T04:35:23.919Z</lastmod>
+    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/Untargeted_method.html</loc>
+    <lastmod>2024-01-29T10:49:09.368Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/Downstream_method.html</loc>
+    <lastmod>2024-01-29T10:49:09.368Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/enrich.html</loc>
+    <lastmod>2024-01-29T10:49:09.368Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/feature_class.html</loc>
+    <lastmod>2024-01-29T10:49:09.368Z</lastmod>
   </url>
   <url>
     <loc>https://shawnwx2019.github.io/metminer-cookbook/index.html</loc>
-    <lastmod>2024-01-29T04:35:23.919Z</lastmod>
+    <lastmod>2024-01-29T10:49:09.368Z</lastmod>
   </url>
   <url>
-    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/rendering.html</loc>
-    <lastmod>2024-01-29T04:35:23.919Z</lastmod>
+    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/references.html</loc>
+    <lastmod>2024-01-29T10:49:09.368Z</lastmod>
   </url>
   <url>
-    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/publishing.html</loc>
-    <lastmod>2024-01-29T04:35:23.919Z</lastmod>
+    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/feature_dedup.html</loc>
+    <lastmod>2024-01-29T10:49:09.368Z</lastmod>
   </url>
   <url>
-    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/customizing.html</loc>
-    <lastmod>2024-01-29T04:35:23.919Z</lastmod>
+    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/iWGCNA.html</loc>
+    <lastmod>2024-01-29T10:49:09.368Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/feature_anno.html</loc>
+    <lastmod>2024-01-29T10:49:09.368Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/Upstream_method.html</loc>
+    <lastmod>2024-01-29T10:49:09.368Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/summary.html</loc>
+    <lastmod>2024-01-29T10:49:09.368Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shawnwx2019.github.io/metminer-cookbook/content/pre_targeted.html</loc>
+    <lastmod>2024-01-29T10:49:09.368Z</lastmod>
   </url>
 </urlset>

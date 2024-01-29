@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MetMiner Cookbook - MetMiner cookbook</title>
+<title>MetMiner Cookbook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,28 +20,63 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./content/installation.html" rel="next">
-<link href="./images/favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../content/Upstream_method.html" rel="next">
+<link href="../index.html" rel="prev">
+<link href="../images/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -82,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">About</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/installation.html">Installation</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -92,11 +127,11 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
+      <a href="../index.html" class="sidebar-logo-link">
       <img src="https://github.com/ShawnWx2019/metminer-cookbook/blob/main/metminer_icon.jpeg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
@@ -114,13 +149,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/installation.html" class="sidebar-item-text sidebar-link">
+  <a href="../content/installation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Installation</span></a>
   </div>
 </li>
@@ -135,19 +170,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Upstream_method.html" class="sidebar-item-text sidebar-link">
+  <a href="../content/Upstream_method.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Untargeted_method.html" class="sidebar-item-text sidebar-link">
+  <a href="../content/Untargeted_method.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Untargeted method</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/pre_targeted.html" class="sidebar-item-text sidebar-link">
+  <a href="../content/pre_targeted.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pseudotargeted method</span></a>
   </div>
 </li>
@@ -164,37 +199,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Downstream_method.html" class="sidebar-item-text sidebar-link">
+  <a href="../content/Downstream_method.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/feature_anno.html" class="sidebar-item-text sidebar-link">
+  <a href="../content/feature_anno.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Feature annotation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/feature_dedup.html" class="sidebar-item-text sidebar-link">
+  <a href="../content/feature_dedup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Feature deduplication</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/feature_class.html" class="sidebar-item-text sidebar-link">
+  <a href="../content/feature_class.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Classification</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/enrich.html" class="sidebar-item-text sidebar-link">
+  <a href="../content/enrich.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Enrichment analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/dam.html" class="sidebar-item-text sidebar-link">
+  <a href="../content/dam.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DAM analysis</span></a>
   </div>
 </li>
@@ -211,13 +246,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/Datamining_method.html" class="sidebar-item-text sidebar-link">
+  <a href="../content/Datamining_method.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/iWGCNA.html" class="sidebar-item-text sidebar-link">
+  <a href="../content/iWGCNA.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">iterative WGCNA</span></a>
   </div>
 </li>
@@ -225,7 +260,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./content/references.html" class="sidebar-item-text sidebar-link">
+  <a href="../content/references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -239,50 +274,89 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project" id="toc-project" class="nav-link active" data-scroll-target="#project">Project</a></li>
-  <li><a href="#citation" id="toc-citation" class="nav-link" data-scroll-target="#citation">Citation</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link active" data-scroll-target="#installation">Installation</a>
+  <ul class="collapse">
+  <li><a href="#structure-of-metminer" id="toc-structure-of-metminer" class="nav-link" data-scroll-target="#structure-of-metminer">Structure of Metminer:</a></li>
+  <li><a href="#dependence" id="toc-dependence" class="nav-link" data-scroll-target="#dependence">Dependence:</a>
+  <ul class="collapse">
+  <li><a href="#tidymass" id="toc-tidymass" class="nav-link" data-scroll-target="#tidymass"><code>tidymass</code></a></li>
+  <li><a href="#msconvert-proteowizard" id="toc-msconvert-proteowizard" class="nav-link" data-scroll-target="#msconvert-proteowizard"><code>MSconvert (proteowizard)</code></a></li>
+  <li><a href="#hpc-tidymass-for-mac-linux-or-wsl-users" id="toc-hpc-tidymass-for-mac-linux-or-wsl-users" class="nav-link" data-scroll-target="#hpc-tidymass-for-mac-linux-or-wsl-users"><code>HPC-tidymass</code> (for mac, linux or wsl users)</a></li>
+  <li><a href="#mdatookits" id="toc-mdatookits" class="nav-link" data-scroll-target="#mdatookits"><code>MDAtookits</code></a></li>
+  <li><a href="#wgcna-shinyapp" id="toc-wgcna-shinyapp" class="nav-link" data-scroll-target="#wgcna-shinyapp"><code>WGCNA-shinyApp</code></a></li>
+  </ul></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/edit/main/content/installation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/blob/main/content/installation.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content column-body" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">MetMiner cookbook</h1>
-<p class="subtitle lead">Large-scale Plant Metabolomics Data Processing and Data Mining</p>
-</div>
+<main class="content" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta column-body">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="project" class="level3">
-<h3 class="anchored" data-anchor-id="project">Project</h3>
-<p><strong>MetMiner:</strong> An Integrated Pipeline for Large-Scale Metabolomics Data Processing and Data Mining.</p>
-<p>This is the documentation of <strong>MetMiner</strong>. You can get up-to-date verison from the GitHub repository <a href="https://github.com/ShawnWx2019/MetMiner" class="uri">https://github.com/ShawnWx2019/MetMiner</a>.</p>
-<p>In this workflow, <a href="https://www.tidymass.org/">tidyMass</a> <span class="citation" data-cites="shenTidyMassObjectorientedReproducible2022b">@shenTidyMassObjectorientedReproducible2022b</span> and <a href="https://github.com/ShawnWx2019/HPC_tidymass">HPC-tidymass</a> takes on the majority of the upstream data analysis, data cleaning, and metabolite annotation tasks.</p>
-<p>Furthermore, we have developed a Metabolomics Downstream Analysis toolkit <a href="https://github.com/ShawnWx2019/MDAtoolkits/tree/master">MDAtoolkits</a> and a user-friendly <a href="https://github.com/ShawnWx2019/WGCNA-shinyApp">WGCNA Shiny app</a>. They are responsible for the downstream analysis and data mining section.</p>
+<section id="installation" class="level1">
+<h1>Installation</h1>
+<p>For the analysis of large-scale metabolomics data, we recommend employing high-performance Linux servers. Specifically designed for large-sample untargeted metabolomics data, we have developed the HPC-tidymass workflow based on the tidyMass package. This workflow includes steps such as data <code>format transformation</code>, <code>peak picking</code>, <code>data cleaning</code>, <code>data standardization</code>, <code>feature annotation</code>, and <code>feature deduplication</code>.</p>
+<p>For small-sample untargeted metabolomics, a regular PC is entirely suitable. Alternatively, you can also complete the entire analysis using <a href="https://github.com/ShawnWx2019/HPC_tidymass">HPC-tidymass</a> <span class="citation" data-cites="shenTidyMassObjectorientedReproducible2022b">@shenTidyMassObjectorientedReproducible2022b</span>. Additionally, you may follow the <a href="https://www.tidymass.org/docs/">tidyMass documentation</a> for the corresponding analysis. In the metabolite annotation and deduplication steps, you can utilize our pre-constructed <a href="https://github.com/ShawnWx2019/HPC_tidymass/tree/main/MS_db">plant-specific metabolome database</a> for annotation and MDAtoolkits for metabolite deduplication analysis.</p>
+<p>For large-scale metabolomics project, we recommend utilizing pseudotargeted metabolomics <span class="citation" data-cites="chenPseudotargetedMetabolomicsMethod2013">@chenPseudotargetedMetabolomicsMethod2013</span>. This approach involves processing data from only 5-15 HPLC runs (bulked QC samples as technical replication), conducting MRM selection, and subsequently performing quantitative detection using TQMS. This allows for the analysis to be conducted without the need for high-performance servers.</p>
+<section id="structure-of-metminer" class="level2">
+<h2 class="anchored" data-anchor-id="structure-of-metminer">Structure of Metminer:</h2>
 </section>
-<section id="citation" class="level3">
-<h3 class="anchored" data-anchor-id="citation">Citation</h3>
-<p>If you have utilized MetMiner in your project, please cite:</p>
-<ol type="1">
-<li><p>Xiao Wang, Shuang Liang, Wenqi Yang, Bing Zhao, Ke Yu, Fei Liang, Luis A. J. Mur, Jeremy A, Roberts, Junli Zhang,and Xuebin Zhang. 2024 “MetMiner: An integrated pipeline for large-scale screening of regulators in plant metabolism.”</p></li>
-<li><p>Shen, Xiaotao, Hong Yan, Chuchu Wang, Peng Gao, Caroline H. Johnson, and Michael P. Snyder. 2022. “TidyMass an Object-Oriented Reproducible Analysis Framework for LC Data.” Nature Communications 13 (1): 4365. https://doi.org/10.1038/s41467-022-32155-w.</p></li>
-</ol>
+<section id="dependence" class="level2">
+<h2 class="anchored" data-anchor-id="dependence">Dependence:</h2>
+<p>R version: <code>&gt;4.1.1</code></p>
+<p>OS: <code>MacOS &gt; 10.10</code>, <code>Win 7-11</code>, <code>Ubuntu 20.04</code></p>
+<p><strong>Only Ubuntu 20.04 has passed the test. Other Linux distributions need to be tested.</strong></p>
+<p>Additionally, if using <code>HPC-tidymass</code> on a linux server, the administrator needs to add your account to the docker group.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> usermod <span class="at">-aG</span> docker <span class="op">&lt;</span>username<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Please install following softwares step by step.</p>
+<section id="tidymass" class="level3">
+<h3 class="anchored" data-anchor-id="tidymass"><code>tidymass</code></h3>
+<p>install tidymass from <code>gitlab</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(remotes)){</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_gitlab</span>(<span class="st">"tidymass/tidymass"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>install tidymass from <code>tidymass.org</code></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"https://www.tidymass.org/tidymass-packages/install_tidymass.txt"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install_tidymass</span>(<span class="at">from =</span> <span class="st">"tidymass.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="msconvert-proteowizard" class="level3">
+<h3 class="anchored" data-anchor-id="msconvert-proteowizard"><code>MSconvert (proteowizard)</code></h3>
+<p>GUI for windows: <a href="https://proteowizard.sourceforge.io/download.html">proteowizard</a></p>
+<p>Docker img for linux or mac os: <a href="https://hub.docker.com/r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses">docker</a></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(massconverter)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">docker_pull_pwiz</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="hpc-tidymass-for-mac-linux-or-wsl-users" class="level3">
+<h3 class="anchored" data-anchor-id="hpc-tidymass-for-mac-linux-or-wsl-users"><code>HPC-tidymass</code> (for mac, linux or wsl users)</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">##&gt;  you can download this pipeline from github or just clone the repo to your server</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">##&gt;  1.0 clone the repo to your server</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="at">git clone https://github.com/ShawnWx2019/HPC_tidymass.git</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">##&gt; Run the initialization script to configure the runtime environment.</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="at">cd HPC_tidymass &amp;&amp; chmod +x init.sh &amp;&amp; bash init.sh</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co">##&gt; test</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="at">hpc-runTidymass -h</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="mdatookits" class="level3">
+<h3 class="anchored" data-anchor-id="mdatookits"><code>MDAtookits</code></h3>
+<p><strong>M</strong>etabolomics <strong>D</strong>ownstream <strong>A</strong>nalysis Toolkits</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">## install from github</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">'MDAtoolkits'</span>)) <span class="fu">install_github</span>(<span class="at">repo =</span> <span class="st">"ShawnWx2019/MDAtoolkits"</span>,<span class="at">ref =</span> <span class="st">'master'</span>))</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="do">## two functions from another package called IMOtoolkits. will be intergreted with MDAtoolkits.</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">'IMOtoolkits'</span>)) <span class="fu">install_github</span>(<span class="at">repo =</span> <span class="st">"ShawnWx2019/IMOtoolkits"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="wgcna-shinyapp" class="level3">
+<h3 class="anchored" data-anchor-id="wgcna-shinyapp"><code>WGCNA-shinyApp</code></h3>
+<p>follow the steps of <a href="https://github.com/ShawnWx2019/WGCNA-shinyApp/blob/main/README.md">WGCNA-shinyapp readme file</a></p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -817,12 +891,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-body">
+<nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../index.html" class="pagination-link  aria-label=" about"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">About</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./content/installation.html" class="pagination-link" aria-label="Installation">
-        <span class="nav-page-text">Installation</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../content/Upstream_method.html" class="pagination-link" aria-label="Introduction">
+        <span class="nav-page-text">Introduction</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -834,7 +911,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/edit/main/content/installation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/blob/main/content/installation.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/ShawnWx2019/metminer-cookbook/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.Template: <a href="https://github.com/nmfs-opensci/NOAA-quarto-simple">NOAA-quarto-simple</a></p>
 </div>
