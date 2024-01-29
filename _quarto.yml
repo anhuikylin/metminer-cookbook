@@ -3,9 +3,9 @@ project:
 
 website: 
   page-navigation: true
-  title: "NOAA quarto simple" 
-  site-url: "https://nmfs-opensci.github.io/NOAA-quarto-simple" 
-  repo-url: "https://github.com/nmfs-opensci/NOAA-quarto-simple"
+  title: "MetMiner Cookbook" 
+  site-url: "https://shawnwx2019.github.io/metminer-cookbook" 
+  repo-url: "https://github.com/ShawnWx2019/metminer-cookbook"
   repo-actions: [edit, source, issue]
   favicon: images/favicon.ico
   
@@ -21,11 +21,11 @@ website:
     align: center
     tools: 
       - icon: globe
-        href: https://nmfs-opensci.github.io
-        text: "NMFS Open Science"
+        href: https://shawnwx2019.github.io/
+        text: "Shawn learn bioinformatics"
       - icon: github
-        href: https://github.com/nmfs-opensci
-        text: "NMFS OpenSci"
+        href: https://github.com/ShawnWx2019
+        text: "Shawn Wang"
 
     style: "docked"
     search: true
