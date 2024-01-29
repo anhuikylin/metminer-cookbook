@@ -1,1 +1,1 @@
-Sitemap: https://nmfs-opensci.github.io/NOAA-quarto-simple/sitemap.xml
+Sitemap: https://shawnwx2019.github.io/metminer-cookbook/sitemap.xml
