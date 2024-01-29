@@ -1,0 +1,88 @@
+# Installation
+
+For the analysis of large-scale metabolomics data, we recommend employing high-performance Linux servers. Specifically designed for large-sample untargeted metabolomics data, we have developed the HPC-tidymass workflow based on the tidyMass package. This workflow includes steps such as data `format transformation`, `peak picking`, `data cleaning`, `data standardization`, `feature annotation`, and `feature deduplication`.   
+
+For small-sample untargeted metabolomics, a regular PC is entirely suitable. Alternatively, you can also complete the entire analysis using [HPC-tidymass](https://github.com/ShawnWx2019/HPC_tidymass) @shenTidyMassObjectorientedReproducible2022b. Additionally, you may follow the [tidyMass documentation](https://www.tidymass.org/docs/) for the corresponding analysis. In the metabolite annotation and deduplication steps, you can utilize our pre-constructed [plant-specific metabolome database](https://github.com/ShawnWx2019/HPC_tidymass/tree/main/MS_db) for annotation and MDAtoolkits for metabolite deduplication analysis.  
+
+For large-scale metabolomics project, we recommend utilizing pseudotargeted metabolomics @chenPseudotargetedMetabolomicsMethod2013. This approach involves processing data from only 5-15 HPLC runs (bulked QC samples as technical replication), conducting MRM selection, and subsequently performing quantitative detection using TQMS. This allows for the analysis to be conducted without the need for high-performance servers.
+
+## Structure of Metminer:
+
+
+
+## Dependence: 
+
+R version: `>4.1.1`
+
+OS: `MacOS > 10.10`, `Win 7-11`, `Ubuntu 20.04`
+
+**Only Ubuntu 20.04 has passed the test. Other Linux distributions need to be tested.**
+
+Additionally, if using `HPC-tidymass` on a linux server, the administrator needs to add your account to the docker group.
+
+```bash
+sudo usermod -aG docker <username>
+```
+
+Please install following softwares step by step.
+
+### `tidymass`
+
+install tidymass from `gitlab`.
+
+```r
+if(!require(remotes)){
+install.packages("remotes")
+}
+remotes::install_gitlab("tidymass/tidymass")
+
+```
+
+install tidymass from `tidymass.org`
+
+```r
+source("https://www.tidymass.org/tidymass-packages/install_tidymass.txt")
+install_tidymass(from = "tidymass.org")
+```
+
+### `MSconvert (proteowizard)`
+
+GUI for windows: [proteowizard](https://proteowizard.sourceforge.io/download.html)
+
+Docker img for linux or mac os: [docker](https://hub.docker.com/r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses)
+
+```r
+library(massconverter)
+docker_pull_pwiz()
+```
+
+### `HPC-tidymass` (for mac, linux or wsl users)
+
+```yaml
+##>  you can download this pipeline from github or just clone the repo to your server
+##>  1.0 clone the repo to your server
+git clone https://github.com/ShawnWx2019/HPC_tidymass.git
+
+##> Run the initialization script to configure the runtime environment.
+
+cd HPC_tidymass && chmod +x init.sh && bash init.sh
+
+##> test
+hpc-runTidymass -h
+
+```
+
+### `MDAtookits`
+
+**M**etabolomics **D**ownstream **A**nalysis Toolkits 
+
+```r
+## install from github
+suppressMessages(if (!require('MDAtoolkits')) install_github(repo = "ShawnWx2019/MDAtoolkits",ref = 'master'))
+## two functions from another package called IMOtoolkits. will be intergreted with MDAtoolkits.
+suppressMessages(if (!require('IMOtoolkits')) install_github(repo = "ShawnWx2019/IMOtoolkits"))
+```
+
+### `WGCNA-shinyApp`
+
+follow the steps of [WGCNA-shinyapp readme file](https://github.com/ShawnWx2019/WGCNA-shinyApp/blob/main/README.md)

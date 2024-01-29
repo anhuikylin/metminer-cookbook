@@ -1,6 +1,6 @@
 ---
 title: "MetMiner cookbook"
-subtitle: "A simple Quarto webpage with a book layout"
+subtitle: "Large-scale Plant Metabolomics Data Processing and Data Mining"
 page-layout: full
 ---
 

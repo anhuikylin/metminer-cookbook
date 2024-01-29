@@ -10,12 +10,12 @@ website:
   favicon: images/favicon.ico
   
   page-footer:
-    right: "This page is built with [Quarto](https://quarto.org/)."
+    right: "This page is built with [Quarto](https://quarto.org/).Template: [NOAA-quarto-simple](https://github.com/nmfs-opensci/NOAA-quarto-simple)"
     left: "&copy; CC-1.0"
   
   sidebar:
     background: "#D9E3E4"
-    logo: "https://raw.githubusercontent.com/nmfs-opensci/assets/main/logo/nmfs-opensci-logo3.png"
+    logo: "https://github.com/ShawnWx2019/metminer-cookbook/blob/main/metminer_icon.jpeg"
     favicon: images/favicon.ico
     pinned: true
     align: center
@@ -32,19 +32,39 @@ website:
     collapse-level: 1
     contents:
       - href: index.qmd
-        text: Home
-      - href: content/add-content.qmd
-        text: Add content
-      - href: content/customizing.qmd
-        text: Customizing
-      - href: content/rendering.qmd
-        text: Rendering
-      - href: content/rmarkdown.Rmd
-        text: R Markdown files
-      - href: content/code.qmd
-        text: Code in your files
-      - href: content/acknowledgements.qmd
-        text: Acknowledgements
+        text: About
+      - href: content/installation.qmd
+        text: Installation
+      - section: "Upstream data processing"
+        contents: 
+        - href: content/Upstream_method.qmd
+          text: Introduction
+        - href: content/Untargeted_method.qmd
+          text: Untargeted method
+        - href: content/pre_targeted.qmd
+          text: Pseudotargeted  method
+      - section: "Downstream data processing"
+        contents: 
+        - href: content/Downstream_method.qmd
+          text: Introduction
+        - href: content/feature_anno.qmd
+          text: Feature annotation
+        - href: content/feature_dedup.qmd
+          text: Feature deduplication
+        - href: content/feature_class.qmd
+          text: Classification
+        - href: content/enrich.qmd
+          text: Enrichment analysis
+        - href: content/dam.qmd
+          text: DAM analysis
+      - section: "Data mining"
+        contents: 
+        - href: content/Datamining_method.qmd
+          text: Introduction
+        - href: content/iWGCNA.qmd
+          text: iterative WGCNA
+      - href: content/references.qmd
+        text: References
 
 format:
   html:
