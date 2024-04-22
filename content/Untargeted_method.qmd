@@ -1,2 +1,5 @@
 # Untargeted metabolomics data process.
 
+# Win 7-11
+# MacOS > 10.10
+# Ubuntu 20.04
