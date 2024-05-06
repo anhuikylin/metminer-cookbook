@@ -14,21 +14,21 @@ To make tidyMass accessible to non-programmers in the field of metabolomics rese
 
 Open the website <https://github.com/ShawnWx2019/MDAtoolkits-interactive>.
 
-![](images/git_repositories.png)
+[![](https://pic.imgdb.cn/item/663890380ea9cb140359053e.png)](https://pic.imgdb.cn/item/663890380ea9cb140359053e.png)
 
 Download the Shiny app file (test_allinone_saved.R).
 
-![](images/Download%20APP.png)
+[![](https://pic.imgdb.cn/item/663891320ea9cb14035b33bb.png)](https://pic.imgdb.cn/item/663891320ea9cb14035b33bb.png)
 
-Open the project in RStudio, click on 'Install' and install the required R packages. After installation is complete, click 'Run App' to launch the application.
+Open the project in RStudio, click on **`Install`** and install the required R packages. After installation is complete, click **`Run App`** to launch the application.
 
-![](images/install_package.png)
+[![](https://pic.imgdb.cn/item/663891930ea9cb14035c09e4.png)](https://pic.imgdb.cn/item/663891930ea9cb14035c09e4.png)
 
 ### 3 Upstream analysis
 
-After clicking 'Run App', the software interface will open in the default web browser. You will be able to see the analysis functions, workflow, citation information, and more provided by the software, as shown in the following image:
+After clicking **`Run App`**, the software interface will open in the default web browser. You will be able to see the analysis functions, workflow, citation information, and more provided by the software, as shown in the following image:
 
-![](images/Software_introduction.png)
+[![](https://pic.imgdb.cn/item/663891c80ea9cb14035c7922.png)](https://pic.imgdb.cn/item/663891c80ea9cb14035c7922.png)
 
 ### 3.1 Upload file
 
@@ -39,63 +39,63 @@ After clicking 'Run App', the software interface will open in the default web br
 3.  If there are changes in column names when preparing sample information, you can click the dropdown button to correspond to them.
 4.  Check sample information.
 
-![](images/File%20check.png)
+[![](https://pic.imgdb.cn/item/663892010ea9cb14035cedab.png)](https://pic.imgdb.cn/item/663892010ea9cb14035cedab.png)
 
 #### 3.1.2 Upload MS file
 
-Click the dropdown button 'Import file' and upload MS1, MS2 files, as shown in the structure below. Click the '1. Check input file' button to check the data.
+Click the dropdown button **`Import file`** and upload MS1, MS2 files, as shown in the structure below. Click the **`1. Check input file`** button to check the data.
 
-![](images/clipboard-2890497056.png)
+[![](https://pic.imgdb.cn/item/6638925d0ea9cb14035db331.png)](https://pic.imgdb.cn/item/6638925d0ea9cb14035db331.png)
 
 ### 3.2 Peak picking
 
-After confirming correctness, click the '2. Peak picking' button for peak picking. This is a relatively lengthy process, and the progress bar will be displayed in the bottom right corner.
+After confirming correctness, click the **`2. Peak picking`** button for peak picking. This is a relatively lengthy process, and the progress bar will be displayed in the bottom right corner.
 
-![](images/Peak%20picking.png)
+[![](https://pic.imgdb.cn/item/6638927e0ea9cb14035dfbcc.png)](https://pic.imgdb.cn/item/6638927e0ea9cb14035dfbcc.png)
 
 ### 3.3 Data cleaning
 
 Data cleaning includes: noise removal, outlier removal, missing value imputation, and data standardization.
 
-![](images/data_clean.png)
+[![](https://pic.imgdb.cn/item/6638929b0ea9cb14035e361a.png)](https://pic.imgdb.cn/item/6638929b0ea9cb14035e361a.png)
 
 #### 3.3.1 Remove noisy features
 
-First, adjust the parameters for grouping, samples, and QC missing frequency on the left side, click 'Find noisy features' to identify noisy features, and then click 'Remove and update' to update the data.
+First, adjust the parameters for grouping, samples, and QC missing frequency on the left side, click **`Find noisy features`** to identify noisy features, and then click **`Remove and update`** to update the data.
 
-![](images/remove_noisy.png)
+[![](https://pic.imgdb.cn/item/663892d00ea9cb14035eb0d4.png)](https://pic.imgdb.cn/item/663892d00ea9cb14035eb0d4.png)
 
 #### 3.3.2 Remove outliers
 
-First, adjust the parameters on the left side, click 'Find outliers' to identify outliers, and then click 'Remove and update' to update the data.。
+First, adjust the parameters on the left side, click **`Find outliers`** to identify outliers, and then click **`Remove and update`** to update the data.。
 
-![](images/remove_outliers.png)
+[![](https://pic.imgdb.cn/item/663892f30ea9cb14035efee3.png)](https://pic.imgdb.cn/item/663892f30ea9cb14035efee3.png)
 
 #### 3.3.3 Missing value imputation
 
-Select the method for missing value imputation, such as: knn, rf, mean, median, zero, bpca, ppca, etc., click 'Start' to proceed with imputation.
+Select the method for missing value imputation, such as: knn, rf, mean, median, zero, bpca, ppca, etc., click **`Start`** to proceed with imputation.
 
-![](images/miss_value.png)
+[![](https://pic.imgdb.cn/item/6638930f0ea9cb14035f3f76.png)](https://pic.imgdb.cn/item/6638930f0ea9cb14035f3f76.png)
 
 #### 3.3.4 Data standardization
 
-First, adjust the method for filling missing values on the left side, such as "svr", "mean", "pqn", "ppca", etc., click "Start normalization" to standardize the data. Then click "Visualize" to visualize the data before and after normalization.
+First, adjust the method for filling missing values on the left side, such as "svr", "mean", "pqn", "ppca", etc., click **`Start normalization`** to standardize the data. Then click **`Visualize`** to visualize the data before and after normalization.
 
-![![](images/Visualize.png)](images/standardization2.png)
+[![](https://pic.imgdb.cn/item/663893220ea9cb14035f6491.png)](https://pic.imgdb.cn/item/663893220ea9cb14035f6491.png)
 
 ### 4 Downstream analysis
 
 #### 4.1 Annotation
 
-We have built-in some publicly available MS1 and MS/MS databases, which can be selected in the parameters column on the left side. You can also use Tidymass to build your own database, which needs to be in .rda format. After setting the parameters, click 'Start annotation'.
+We have built-in some publicly available MS1 and MS/MS databases, which can be selected in the parameters column on the left side. You can also use Tidymass to build your own database, which needs to be in .rda format. After setting the parameters, click **`Start annotation`**.
 
-![](images/annotate.png)
+[![](https://pic.imgdb.cn/item/663893400ea9cb14035fa5b8.png)](https://pic.imgdb.cn/item/663893400ea9cb14035fa5b8.png)
 
 #### 4.2 Filter annotation
 
-First, select hydrophilic interaction chromatography (HILIC) or reverse phase chromatography (RP), then choose the ion mode, and finally select the filtering method for annotation. For multiple annotations: you can choose to retain all, retain those with high scores, or retain the first annotation. For removing redundant annotations: you can choose to retain all or retain the first annotation. You can also filter annotations based on accuracy: you can choose to retain all or those with higher accuracy (1,2).
+First, select hydrophilic interaction chromatography (HILIC) or reverse phase chromatography (RP), then choose the ion mode, and finally select the filtering method for annotation. For multiple annotations: you can choose to retain all, retain those with high scores, or retain the first annotation. For removing redundant annotations: you can choose to retain all or retain the first annotation. You can also filter annotations based on accuracy: you can choose to retain all or those with higher accuracy (1,2). After the parameters are set, click the **`Start annotation filtering`** button to filter annotations.
 
-![](images/Annotation%20filtering.png)
+[![](https://pic.imgdb.cn/item/663893550ea9cb14035fcdb3.png)](https://pic.imgdb.cn/item/663893550ea9cb14035fcdb3.png)
 
 ## Ubuntu 20.04
 
@@ -103,7 +103,7 @@ First, select hydrophilic interaction chromatography (HILIC) or reverse phase ch
 
 #### 1. Parameters
 
-```{bash}
+``` {style="color:black; background-color:#F8F8FF"}
 hpc-runTidymass -h
 Tidymass pipeline part1. Date transform ,peak picking and annotation
 Usage:
@@ -147,11 +147,7 @@ The sample information must include at least the following five columns:
 
 For more details on sample information, you can visit the TidyMass official website.
 
-```{bash}
-
-```
-
-![](images/sample_info.png)
+[![](https://pic.imgdb.cn/item/6638937f0ea9cb1403602849.png)](https://pic.imgdb.cn/item/6638937f0ea9cb1403602849.png)
 
 ##### 2.2 .raw file
 
@@ -164,7 +160,7 @@ The .raw file contains post-run data, including two subfolders: "NEG" and "POS."
 
 The file naming and structure are as follows:
 
-```{bash}
+``` {style="color:black; background-color:#F8F8FF"}
 32.CH/
 ├── cw_methodt_mrm_chenhui.xlsx
 ├── NEG
@@ -211,7 +207,7 @@ hpc-runTidymass -i 32.CH/ -t 2 -g no -c rp -s 32.CH/sampe_info.txt
 
 The analysis yielded the following results:
 
-```{bash}
+``` {style="color:black; background-color:#F8F8FF"}
 ./working_dir/
 ├── 01.data
 │   └── rawdata
@@ -421,13 +417,11 @@ The analysis yielded the following results:
 └── 03.result
 
 52 directories, 154 files
-
 ```
 
 The results after peak picking, data cleaning, removing redundancy, and annotation processing are stored at the following path:
 
-```{bash}
-
+``` {style="color:black; background-color:#F8F8FF"}
 ./working_dir/02.progress/Annotation/RemoveRedundancy/
 ├── Final_annotation.xlsx
 ├── metadata_deduplicate_cw_method.xlsx
@@ -443,8 +437,6 @@ The results after peak picking, data cleaning, removing redundancy, and annotati
 └── semi_annotation.xlsx
 
 0 directories, 1 file
-
-
 ```
 
 #### 5.Notes
@@ -453,7 +445,7 @@ The Linux version, compared to the ShinyAPP, features fewer configuration parame
 
 If parameter adjustments are needed during the analysis, you can modify the corresponding parameters in the .HPC_tidymass/src/R/ directory.
 
-```{bash}
+``` {style="color:black; background-color:#F8F8FF"}
 .HPC_tidymass/src/R/
 ├── 02.PeakPicking.R
 ├── 04.DataCleaning.R
