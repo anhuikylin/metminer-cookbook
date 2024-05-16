@@ -1,0 +1,5 @@
+# Feature Annotation
+
+We have built-in some publicly available MS1 and MS/MS databases (**MoNA, Massbank, ReSpect, PlaSMA, KEGG, KNApSAcK, Ath_Cyc, Zma_Cyc**), which can be selected in the parameters column on the left side. You can also use Tidymass to build your own database, which needs to be in .rda format. After setting the parameters, click **`Start annotation`**.
+
+[![](https://pic.imgdb.cn/item/663af6320ea9cb1403f00035.png)](https://pic.imgdb.cn/item/663af6320ea9cb1403f00035.png)
