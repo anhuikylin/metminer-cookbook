@@ -1,1 +1,5 @@
 # Feature deduplication
+
+First, select hydrophilic interaction chromatography (HILIC) or reverse phase chromatography (RP), then choose the ion mode, and finally select the filtering method for annotation. For multiple annotations: you can choose to retain all, retain those with high scores, or retain the first annotation. For removing redundant annotations: you can choose to retain all or retain the first annotation. You can also filter annotations based on accuracy: you can choose to retain all or those with higher accuracy (1,2). After the parameters are set, click the **`Start annotation filtering`** button to filter annotations.
+
+[![](https://pic.imgdb.cn/item/663893550ea9cb14035fcdb3.png)](https://pic.imgdb.cn/item/663893550ea9cb14035fcdb3.png)
