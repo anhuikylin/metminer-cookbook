@@ -1,107 +1,25 @@
 # Untargeted metabolomics data process.
 
-## OS: MacOS \> 10.10
-
-## Win 7-11
-
-### 1 Introduce
+## Introduce
 
 This Shiny application is developed based on the tidyMass package, specifically designed for the analysis of non-targeted/targeted metabolomics data. Dr. Xiaotao Shen's tidyMass is an excellent open-source software tailored for metabolomics data processing. It adheres to the tidyverse development philosophy, significantly enhancing code readability. Additionally, the newly added **`mass_dataset`** object makes the metabolomics data analysis process more transparent and reproducible.
 
 To make tidyMass accessible to non-programmers in the field of metabolomics research, we developed this Shiny application. We integrated data visualization capabilities into the downstream analysis workflow to facilitate a more intuitive observation and presentation of the analysis results. Considering hardware limitations, we recommend using this Shiny app when the number of samples is fewer than 30.
 
-### 2 Download ShinyAPP
+|                        |  HPC_tidymass   | MDAtoolkits-interactive ShinyAPP |
+|:----------------------:|:---------------:|:--------------------------------:|
+| Programming Experience |       yes       |                no                |
+|   Number of Samples    |       ≥30       |               \<30               |
+|      Flexibility       |       Low       |               High               |
+|     Interactivity      |       Low       |               High               |
+|         speed          |      Fast       |               Slow               |
+|         System         | Ubuntu / CentOS |           Win / MacOS            |
 
-Open the website <https://github.com/ShawnWx2019/MDAtoolkits-interactive>.
+## Usage of HPC_tidymass
 
-[![](https://pic.imgdb.cn/item/663890380ea9cb140359053e.png)](https://pic.imgdb.cn/item/663890380ea9cb140359053e.png)
+![](https://img.shields.io/badge/Ubuntu-20.04-greenyellow){style="float: left"} <br>
 
-Download the Shiny app file (test_allinone_saved.R).
-
-[![](https://pic.imgdb.cn/item/663891320ea9cb14035b33bb.png)](https://pic.imgdb.cn/item/663891320ea9cb14035b33bb.png)
-
-Open the project in RStudio, click on **`Install`** and install the required R packages. After installation is complete, click **`Run App`** to launch the application.
-
-[![](https://pic.imgdb.cn/item/663891930ea9cb14035c09e4.png)](https://pic.imgdb.cn/item/663891930ea9cb14035c09e4.png)
-
-### 3 Upstream analysis
-
-After clicking **`Run App`**, the software interface will open in the default web browser. You will be able to see the analysis functions, workflow, citation information, and more provided by the software, as shown in the following image:
-
-[![](https://pic.imgdb.cn/item/663891c80ea9cb14035c7922.png)](https://pic.imgdb.cn/item/663891c80ea9cb14035c7922.png)
-
-### 3.1 Upload file
-
-#### 3.1.1 Upload sample information
-
-1.  Set working directory.
-2.  Upload sample information file (must be a .csv file).
-3.  If there are changes in column names when preparing sample information, you can click the dropdown button to correspond to them.
-4.  Check sample information.
-
-[![](https://pic.imgdb.cn/item/663892010ea9cb14035cedab.png)](https://pic.imgdb.cn/item/663892010ea9cb14035cedab.png)
-
-#### 3.1.2 Upload MS file
-
-Click the dropdown button **`Import file`** and upload MS1, MS2 files, as shown in the structure below. Click the **`1. Check input file`** button to check the data.
-
-[![](https://pic.imgdb.cn/item/6638925d0ea9cb14035db331.png)](https://pic.imgdb.cn/item/6638925d0ea9cb14035db331.png)
-
-### 3.2 Peak picking
-
-After confirming correctness, click the **`2. Peak picking`** button for peak picking. This is a relatively lengthy process, and the progress bar will be displayed in the bottom right corner.
-
-[![](https://pic.imgdb.cn/item/6638927e0ea9cb14035dfbcc.png)](https://pic.imgdb.cn/item/6638927e0ea9cb14035dfbcc.png)
-
-### 3.3 Data cleaning
-
-Data cleaning includes: noise removal, outlier removal, missing value imputation, and data standardization.
-
-[![](https://pic.imgdb.cn/item/6638929b0ea9cb14035e361a.png)](https://pic.imgdb.cn/item/6638929b0ea9cb14035e361a.png)
-
-#### 3.3.1 Remove noisy features
-
-First, adjust the parameters for grouping, samples, and QC missing frequency on the left side, click **`Find noisy features`** to identify noisy features, and then click **`Remove and update`** to update the data.
-
-[![](https://pic.imgdb.cn/item/663892d00ea9cb14035eb0d4.png)](https://pic.imgdb.cn/item/663892d00ea9cb14035eb0d4.png)
-
-#### 3.3.2 Remove outliers
-
-First, adjust the parameters on the left side, click **`Find outliers`** to identify outliers, and then click **`Remove and update`** to update the data.。
-
-[![](https://pic.imgdb.cn/item/663892f30ea9cb14035efee3.png)](https://pic.imgdb.cn/item/663892f30ea9cb14035efee3.png)
-
-#### 3.3.3 Missing value imputation
-
-Select the method for missing value imputation, such as: knn, rf, mean, median, zero, bpca, ppca, etc., click **`Start`** to proceed with imputation.
-
-[![](https://pic.imgdb.cn/item/6638930f0ea9cb14035f3f76.png)](https://pic.imgdb.cn/item/6638930f0ea9cb14035f3f76.png)
-
-#### 3.3.4 Data standardization
-
-First, adjust the method for filling missing values on the left side, such as "svr", "mean", "pqn", "ppca", etc., click **`Start normalization`** to standardize the data. Then click **`Visualize`** to visualize the data before and after normalization.
-
-[![](https://pic.imgdb.cn/item/663893220ea9cb14035f6491.png)](https://pic.imgdb.cn/item/663893220ea9cb14035f6491.png)
-
-### 4 Downstream analysis
-
-#### 4.1 Annotation
-
-We have built-in some publicly available MS1 and MS/MS databases, which can be selected in the parameters column on the left side. You can also use Tidymass to build your own database, which needs to be in .rda format. After setting the parameters, click **`Start annotation`**.
-
-[![](https://pic.imgdb.cn/item/663893400ea9cb14035fa5b8.png)](https://pic.imgdb.cn/item/663893400ea9cb14035fa5b8.png)
-
-#### 4.2 Filter annotation
-
-First, select hydrophilic interaction chromatography (HILIC) or reverse phase chromatography (RP), then choose the ion mode, and finally select the filtering method for annotation. For multiple annotations: you can choose to retain all, retain those with high scores, or retain the first annotation. For removing redundant annotations: you can choose to retain all or retain the first annotation. You can also filter annotations based on accuracy: you can choose to retain all or those with higher accuracy (1,2). After the parameters are set, click the **`Start annotation filtering`** button to filter annotations.
-
-[![](https://pic.imgdb.cn/item/663893550ea9cb14035fcdb3.png)](https://pic.imgdb.cn/item/663893550ea9cb14035fcdb3.png)
-
-## Ubuntu 20.04
-
-### Usage of HPC_tidymass
-
-#### 1. Parameters
+### 1. Parameters
 
 ``` {style="color:black; background-color:#F8F8FF"}
 hpc-runTidymass -h
@@ -129,9 +47,9 @@ Description
 [-c]:column,  rp or hilic, default: rp
 ```
 
-#### 2. Data Preparation
+### 2. Data Preparation
 
-##### 2.1 Sample Information
+#### **2.1 Sample Information**
 
 The sample information must include at least the following five columns:
 
@@ -147,11 +65,21 @@ The sample information must include at least the following five columns:
 
 For more details on sample information, you can visit the TidyMass official website.
 
-[![](https://pic.imgdb.cn/item/6638937f0ea9cb1403602849.png)](https://pic.imgdb.cn/item/6638937f0ea9cb1403602849.png)
+| sample_id | injection.order |  class  |  group  | batch |
+|:---------:|:---------------:|:-------:|:-------:|:-----:|
+|   QC_01   |        1        |   QC    |   QC    |   1   |
+|   QC_02   |        2        |   QC    |   QC    |   1   |
+|   S_01    |        3        | Subject | Subject |   1   |
+|   S_02    |        4        | Subject | Subject |   1   |
+|   S_03    |        5        | Subject | Subject |   1   |
+|   S_04    |        6        | Subject | Subject |   1   |
+|   QC_07   |        7        |   QC    |   QC    |   1   |
+|   QC_08   |        8        |   QC    |   QC    |   1   |
+|   S_05    |        9        | Subject | Subject |   1   |
+|   S_06    |       10        | Subject | Subject |   1   |
 
-##### 2.2 .raw file
+#### **2.2 .raw file**
 
-\
 The .raw file contains post-run data, including two subfolders: "NEG" and "POS." Both of these subfolders contain quality control (QC) files and sample files. The file naming convention is as follows:
 
 -   Quality control files: Begin with "QC\_."
@@ -187,9 +115,9 @@ The file naming and structure are as follows:
     └── S_06.raw
 ```
 
-#### 3. Software Usage Instructions
+#### **3. Software Usage Instructions**
 
-```         
+``` {style="color:black; background-color:#F8F8FF"}
 hpc-runTidymass -i 32.CH/ -t 2 -g no -c rp -s 32.CH/sampe_info.txt
 ```
 
@@ -203,7 +131,7 @@ hpc-runTidymass -i 32.CH/ -t 2 -g no -c rp -s 32.CH/sampe_info.txt
 
 `-s : sample_info,  sample information. see tidymass manual.`
 
-#### 4.Result
+#### **4.Result**
 
 The analysis yielded the following results:
 
@@ -439,7 +367,7 @@ The results after peak picking, data cleaning, removing redundancy, and annotati
 0 directories, 1 file
 ```
 
-#### 5.Notes
+#### **5.Notes**
 
 The Linux version, compared to the ShinyAPP, features fewer configuration parameters and offers simpler and faster operations, making it suitable for projects with more than 30 samples.
 
@@ -458,3 +386,131 @@ If parameter adjustments are needed during the analysis, you can modify the corr
 ├── 09.semi_annotation.R
 └── classifiy.R
 ```
+
+## Usage of ShinyAPP
+
+![Win version](https://img.shields.io/badge/Win-%3E7-greenyellow) ![MacOS version](https://img.shields.io/badge/MacOS-%3E%2010.10-salmon)
+
+### 2 Download ShinyAPP
+
+Open the website <https://github.com/ShawnWx2019/MDAtoolkits-interactive>.
+
+[![](https://pic.imgdb.cn/item/663890380ea9cb140359053e.png)](https://pic.imgdb.cn/item/663890380ea9cb140359053e.png)
+
+Download the Shiny app file (test_allinone_saved.R).
+
+[![](https://pic.imgdb.cn/item/663891320ea9cb14035b33bb.png)](https://pic.imgdb.cn/item/663891320ea9cb14035b33bb.png)
+
+Open the project in RStudio, click on **`Install`** and install the required R packages. After installation is complete, click **`Run App`** to launch the application.
+
+[![](https://pic.imgdb.cn/item/663891930ea9cb14035c09e4.png)](https://pic.imgdb.cn/item/663891930ea9cb14035c09e4.png)
+
+### 3 Upstream analysis
+
+After clicking **`Run App`**, the software interface will open in the default web browser. You will be able to see the analysis functions, workflow, citation information, and more provided by the software, as shown in the following image:
+
+[![](https://pic.imgdb.cn/item/663891c80ea9cb14035c7922.png)](https://pic.imgdb.cn/item/663891c80ea9cb14035c7922.png)
+
+Before starting the project, we need to set up the working directory and upload sample information. <br> **`Start with Ms file`**: If your data is in raw format, you need to first convert it to .mgf format using HPC_tidymass. Then click on 'Start with Ms file' to upload the file. Then upload the folder containing MS2. <br>
+
+[![](https://pic.imgdb.cn/item/6639fce80ea9cb140386eb60.png)](https://pic.imgdb.cn/item/6639fce80ea9cb140386eb60.png)
+
+**`Start with table file`**: If your data is a post-peak metabolite expression matrix, you can click on the 'Start with table file' button to upload the data. The sample table is as follows, and the first four columns must exist, with column names not to be changed. Then upload the folder containing MS2. <br> [![](https://pic.imgdb.cn/item/663a2d880ea9cb1403cdf18f.png)](https://pic.imgdb.cn/item/663a2d880ea9cb1403cdf18f.png)
+
+| variable_id | mz          | rt          | ion | QC_01       | QC_02       | S_0001      | S_0002      |
+|---------|---------|---------|---------|---------|---------|---------|---------|
+| M70T62_POS  | 70.01316878 | 62.06685067 | pos | 6422973.113 | 6633231.566 | 6660501.932 | 11244650.29 |
+| M70T68_POS  | 70.06585079 | 67.5881424  | pos | 10706990.64 | 10460824.98 | 11116669.13 | 6827733.67  |
+| M71T62_POS  | 70.51076913 | 62.06355477 | pos | 1199070.522 | 1194094.6   | 961425.2767 | 1901259.45  |
+| M71T797_POS | 70.56926299 | 796.6648254 | pos | 261481.9444 | 586260.7111 | 511672.8729 | 545118.6108 |
+| M71T923_POS | 70.59889285 | 923.4801941 | pos | 389934.3209 | NA          | 92479.00834 | 256380.4942 |
+| M71T792_POS | 70.81124068 | 791.72229   | pos | NA          | 116109.2233 | 215459.5171 | NA          |
+| M71T935_POS | 70.99175737 | 934.7305298 | pos | NA          | 2577127.496 | 1839011.277 | NA          |
+| M71T763_POS | 71.27096446 | 763.3102417 | pos | 209341.4224 | 243076.9396 | NA          | NA          |
+| M71T835_POS | 71.27102179 | 834.5613403 | pos | NA          | 226504.3811 | NA          | NA          |
+
+**`Start with massdataset object`**: If your data is generated by tidymass, you can choose the 'Start with massdataset object' button to upload your data. Then upload the folder containing MS2. [![](https://pic.imgdb.cn/item/663a2cdc0ea9cb1403cd232a.png)](https://pic.imgdb.cn/item/663a2cdc0ea9cb1403cd232a.png) The file structure is as follows.
+
+``` {style="color:black; background-color:#F8F8FF"}
+E:/count/test3
+├── MS2
+│   ├── NEG
+│   │   ├── QC
+│   │   │   └── QC_001.mgf
+│   │   └── Subject
+│   └── POS
+│       ├── QC
+│       │   └── QC_002.mgf
+│       └── Subject
+├── object.neg.rda
+└── object.pos.rda
+```
+
+### 3.1 Upload file
+
+#### **3.1.1 Upload sample information**
+
+1.  Set working directory.
+2.  Upload sample information file (must be a **.csv** file).
+3.  If there are changes in column names when preparing sample information, you can click the dropdown button to correspond to them.
+4.  Check sample information.
+
+[![](https://pic.imgdb.cn/item/6639a8d10ea9cb1403f30cdd.png)](https://pic.imgdb.cn/item/6639a8d10ea9cb1403f30cdd.png)
+
+If you have unfinished analyses,you need to upload the previously generated mass_dataset (.rda) files (both positive and negative model), and then select the steps you wish to continue with. The optional steps include **`removing noisy features`**, **`removing outliers`**, **`imputing missing values`**, **`normalization`**, **`annotation`**, and **`annotation filtering`**.
+
+[![](https://pic.imgdb.cn/item/6639f9040ea9cb140380effe.png)](https://pic.imgdb.cn/item/6639f9040ea9cb140380effe.png)
+
+#### **3.1.2 Upload MS file**
+
+Click the dropdown button **`Import file`** and upload MS1, MS2 files, as shown in the structure below. Click the **`1. Check input file`** button to check the data.
+
+[![](https://pic.imgdb.cn/item/6638925d0ea9cb14035db331.png)](https://pic.imgdb.cn/item/6638925d0ea9cb14035db331.png)
+
+### 3.2 Peak picking
+
+After confirming correctness, click the **`2. Peak picking`** button for peak picking. This is a relatively lengthy process, and the progress bar will be displayed in the bottom right corner.
+
+[![](https://pic.imgdb.cn/item/6638927e0ea9cb14035dfbcc.png)](https://pic.imgdb.cn/item/6638927e0ea9cb14035dfbcc.png)
+
+### 3.3 Data cleaning
+
+Data cleaning includes: **`Overview`**, **`Remove noisy features`**, **`Remove outliers`**, **`Missing value imputation`**, and **`Normalization`**.
+
+[![](https://pic.imgdb.cn/item/663a2f830ea9cb1403d0495a.png)](https://pic.imgdb.cn/item/663a2f830ea9cb1403d0495a.png)
+
+#### **3.3.1 Overview**
+
+First, upload sample information and set parameters, then **`Update sample information`**, click **`Start`**, and finally open the **`Interactive plot`** button to check for missing sample data.
+
+[![](https://pic.imgdb.cn/item/663a33c90ea9cb1403d6d1ab.png)](https://pic.imgdb.cn/item/663a33c90ea9cb1403d6d1ab.png)
+
+Open the interactive button, then hover the mouse over the image to see detailed information about the samples in the detailed image.
+
+[![](https://pic.imgdb.cn/item/663a38680ea9cb1403ddb41a.png)](https://pic.imgdb.cn/item/663a38680ea9cb1403ddb41a.png)
+
+#### **3.3.2 Remove noisy features**
+
+First, adjust the parameters for grouping, samples, and QC missing frequency on the left side, click **`Find noisy features`** to identify noisy features, and then click **`Remove and update`** to update the data.
+
+[![](https://pic.imgdb.cn/item/663892d00ea9cb14035eb0d4.png)](https://pic.imgdb.cn/item/663892d00ea9cb14035eb0d4.png)
+
+#### **3.3.3 Remove outliers**
+
+First, adjust the parameters on the left side, click **`Find outliers`** to identify outliers, open the **`Interactive plot`**, hover the mouse over the outlier sample to view outlier sample information, remove outlier values. Then switch to negative spectrum and repeat the operation, then click **`Remove and update`** to update the data.
+
+[![](https://pic.imgdb.cn/item/663a3f8a0ea9cb1403e81801.png)](https://pic.imgdb.cn/item/663a3f8a0ea9cb1403e81801.png)
+
+#### **3.3.4 Missing value imputation**
+
+Select the method for missing value imputation, such as: knn, rf, mean, median, zero, mininum, bpca, svdlmpute, ppca, etc., click **`Start`** to proceed with imputation.
+
+[![](https://pic.imgdb.cn/item/6638930f0ea9cb14035f3f76.png)](https://pic.imgdb.cn/item/6638930f0ea9cb14035f3f76.png)
+
+#### **3.3.5 Data standardization**
+
+First, adjust the method for filling missing values on the left side, such as svr, total, mean,median, pqn, loess ppca, etc., click **`Start normalization`** to standardize the data. Select PCA color grouping. Then click **`Visualize`** to visualize the data before and after normalization. Open the **`Interactive plot`** button, and you can see the 3D PCA plot. Hovering the mouse over it allows you to see detailed information about the samples. Finally, click the **`Export normalized data`** button to download the normalized data.
+
+[![](https://pic.imgdb.cn/item/663aee480ea9cb1403e13554.png)](https://pic.imgdb.cn/item/663aee480ea9cb1403e13554.png)
+
+[![](https://pic.imgdb.cn/item/663aeda60ea9cb1403dff9d3.png)](https://pic.imgdb.cn/item/663aeda60ea9cb1403dff9d3.png)
