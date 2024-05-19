@@ -1,0 +1,9 @@
+#### **4.3 Data integration**
+
+Set the method for integrating the data, then click the **`Start integration`** button to proceed with data integration. The result will generate an accumulation matrix, sample information, variable information, and integrated results of compound annotation, which you can download.
+
+[![](https://img2.imgtp.com/2024/05/08/nN0m1plV.png)](https://img2.imgtp.com/2024/05/08/nN0m1plV.png)
+
+Switch to the **`Figures`** tab, click the **`Start visualization`** button, adjust PCA grouping colors, and proceed with plotting. You can also set the image size, then click **`Download`** to download the image. Open the **`Interactive plot`** button, where you can view the 3D PCA plot, hover the mouse to see detailed sample information. Scroll down the page, at the bottom, you can see the sample correlation plot. You can adjust its colors, grouping, clustering, and more.
+
+[![](https://img2.imgtp.com/2024/05/08/29I5RZYc.png)](https://img2.imgtp.com/2024/05/08/29I5RZYc.png)
