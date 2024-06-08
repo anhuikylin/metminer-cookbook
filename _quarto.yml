@@ -1,25 +1,25 @@
-project: 
+project:
   type: website
 
-website: 
+website:
   page-navigation: true
-  title: "MetMiner Cookbook" 
-  site-url: "https://shawnwx2019.github.io/metminer-cookbook" 
+  title: "MetMiner Cookbook"
+  site-url: "https://shawnwx2019.github.io/metminer-cookbook"
   repo-url: "https://github.com/ShawnWx2019/metminer-cookbook"
   repo-actions: [edit, source, issue]
   favicon: images/favicon.ico
-  
+
   page-footer:
-    right: "This page is built with [Quarto](https://quarto.org/).Template: [NOAA-quarto-simple](https://github.com/nmfs-opensci/NOAA-quarto-simple)"
+    right: "This page is built with [Quarto](https://quarto.org/)"
     left: "&copy; CC-1.0"
-  
+
   sidebar:
     background: "#D9E3E4"
-    logo: "https://github.com/ShawnWx2019/metminer-cookbook/blob/main/metminer_icon.jpeg"
+    logo: "https://shawnmagic-1257599720.cos.ap-chengdu.myqcloud.com/picgologo_long.webp"
     favicon: images/favicon.ico
     pinned: true
     align: center
-    tools: 
+    tools:
       - icon: globe
         href: https://shawnwx2019.github.io/
         text: "Shawn learn bioinformatics"
@@ -36,15 +36,17 @@ website:
       - href: content/installation.qmd
         text: Installation
       - section: "Upstream data processing"
-        contents: 
+        contents:
         - href: content/Upstream_method.qmd
           text: Introduction
-        - href: content/Untargeted_method.qmd
-          text: Untargeted method
-        - href: content/pre_targeted.qmd
-          text: Pseudotargeted  method
+        - href: content/Project_init.qmd
+          text: Project initiate
+        - href: content/Import_data.qmd
+          text: Data import
+        - href: content/Data_ummary.qmd
+          text: Raw data summary
       - section: "Downstream data processing"
-        contents: 
+        contents:
         - href: content/Downstream_method.qmd
           text: Introduction
         - href: content/feature_anno.qmd
@@ -58,7 +60,7 @@ website:
         - href: content/dam.qmd
           text: DAM analysis
       - section: "Data mining"
-        contents: 
+        contents:
         - href: content/Datamining_method.qmd
           text: Introduction
         - href: content/iWGCNA.qmd
@@ -69,7 +71,7 @@ website:
 format:
   html:
     theme:
-      light: [cosmo, theme.scss] 
+      light: [cosmo, theme.scss]
       dark: [cosmo, theme-dark.scss]
     code-copy: true
     code-overflow: wrap
@@ -80,4 +82,5 @@ filters:
   - include-files.lua
   - quarto
 
-  
+
+bibliography: content/reference.bib

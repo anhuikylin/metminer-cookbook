@@ -1,88 +1,136 @@
 # Installation
 
-For the analysis of large-scale metabolomics data, we recommend employing high-performance Linux servers. Specifically designed for large-sample untargeted metabolomics data, we have developed the HPC-tidymass workflow based on the tidyMass package. This workflow includes steps such as data `format transformation`, `peak picking`, `data cleaning`, `data standardization`, `feature annotation`, and `feature deduplication`.   
+[![R version](https://img.shields.io/badge/R-v4.3.3-salmon)](https://www.r-project.org) [![TBtools version](https://img.shields.io/badge/TBtools-%3Ev2.096-greenyellow)](https://www.yuque.com/cjchen/hirv8i/fzc4g9) [![license](https://img.shields.io/badge/license-MIT-red)](https://opensource.org/licenses/MIT) [![Myblog](https://img.shields.io/badge/Blog-ShanwLearnBioinfo-purple)](https://shawnwx2019.github.io/)
 
-For small-sample untargeted metabolomics, a regular PC is entirely suitable. Alternatively, you can also complete the entire analysis using [HPC-tidymass](https://github.com/ShawnWx2019/HPC_tidymass) @shenTidyMassObjectorientedReproducible2022b. Additionally, you may follow the [tidyMass documentation](https://www.tidymass.org/docs/) for the corresponding analysis. In the metabolite annotation and deduplication steps, you can utilize our pre-constructed [plant-specific metabolome database](https://github.com/ShawnWx2019/HPC_tidymass/tree/main/MS_db) for annotation and MDAtoolkits for metabolite deduplication analysis.  
+The MetMiner pipeline is primarily driven by three R packages: `TidyMass` `MDAtoolkits` `WGCNA`, each responsible for different components as illustrated in Figure 1. These packages are integrated into two user-friendly `Shiny` applications. We offer two installation methods:
 
-For large-scale metabolomics project, we recommend utilizing pseudotargeted metabolomics @chenPseudotargetedMetabolomicsMethod2013. This approach involves processing data from only 5-15 HPLC runs (bulked QC samples as technical replication), conducting MRM selection, and subsequently performing quantitative detection using TQMS. This allows for the analysis to be conducted without the need for high-performance servers.
+-   For users proficient in R and with debugging skills, we recommend the first method, which involves installing the R packages individually.
+
+-   For general users, we suggest installing and running the application via the TBtools plugin store.
 
 ## Structure of Metminer:
 
+::: {#fig-structure}
+![](https://shawnmagic-1257599720.cos.ap-chengdu.myqcloud.com/picgoFig1.StructureAndStrategy.webp){fig-align="center" width="80%"}
 
+Structure of metMiner pipeline.
+:::
 
-## Dependence: 
+## Method 1: Install from R or RStudio
 
-R version: `>4.1.1`
+### MetMiner shinyapp
 
-OS: `MacOS > 10.10`, `Win 7-11`, `Ubuntu 20.04`
+Copy and paste following code into your R script or R console and run:
 
-**Only Ubuntu 20.04 has passed the test. Other Linux distributions need to be tested.**
+```{r eval=FALSE}
+##> for chinese users:
+##> options("repos" = c(CRAN="https://mirrors.tuna.tsinghua.edu.cn/CRAN/"))
 
-Additionally, if using `HPC-tidymass` on a linux server, the administrator needs to add your account to the docker group.
-
-```bash
-sudo usermod -aG docker <username>
+if (!require('remotes')) install.packages('remotes');
+if (!require('Hmisc')) install.packages('Hmisc');
+if (!require('tidymass')) {
+  source("https://www.tidymass.org/tidymass-packages/install_tidymass.txt");
+  install_tidymass(from = "tidymass.org")
+};
+if (!require('ropls')) remotes::install_github("SamGG/ropls");
+if (!require('PCAtools')) remotes::install_github('kevinblighe/PCAtools');
+if (!require('MDAtoolkits')) remotes::install_github('ShawnWx2019/MDAtoolkits',ref = 'master');
+if (!require('shinyFiles')) remotes::install_github('thomasp85/shinyFiles');
+if (!require('shinyWidgets')) remotes::install_github("dreamRs/shinyWidgets");
+if (!require('ComplexHeatmap')) remotes::install_github('jokergoo/ComplexHeatmap');
+if (!require('clusterProfiler')) remotes::install_github('YuLab-SMU/clusterProfiler');
+if (!require('shinyjs')) install.packages('shinyjs');
+if (!require('dashboardthemes')) install.packages('dashboardthemes');
+if (!require("DT")) install.packages('DT');
+if (!require('shiny')) install.packages('shiny');
+if (!require('bsicons')) install.packages('bsicons');
+if (!require('bslib')) install.packages('bslib');
+if (!require('ggsci')) install.packages('ggsci');
+if (!require('plotly')) install.packages('plotly');
+if (!require('ggrepel')) install.packages('ggrepel');
+if (!require('shinythemes')) install.packages('shinythemes');
+if (!require('ggstatsplot')) install.packages('ggstatsplot');
+if (!require('patchwork')) install.packages('patchwork');
+if (!require('tidyverse')) install.packages('tidyverse');
+if (!require('shinyjqui')) install.packages('shinyjqui');
+if (!require('colourpicker')) install.packages('colourpicker');
+if (!require('RCurl')) install.packages('RCurl');
+if (!require('MetMiner')) remotes::install_github('ShawnWx2019/MetMiner');
 ```
 
-Please install following softwares step by step.
+running following code to start `metMiner shinyapp`
 
-### `tidymass`
-
-install tidymass from `gitlab`.
-
-```r
-if(!require(remotes)){
-install.packages("remotes")
-}
-remotes::install_gitlab("tidymass/tidymass")
-
+```{r eval=FALSE}
+library(tidyverse)
+library(tidymass)
+library(MDAtoolkits)
+library(MetMiner)
+##> start metMiner shinyapp
+run_metMiner(maxRequestSize = 300)
 ```
 
-install tidymass from `tidymass.org`
+### WGCNA shinyapp
 
-```r
-source("https://www.tidymass.org/tidymass-packages/install_tidymass.txt")
-install_tidymass(from = "tidymass.org")
+**Clone github repo to local**
+
+``` bash
+# clone this repo to your machine
+git clone git@github.com:ShawnWx2019/WGCNA-shinyApp.git WGCNAshiny
+
+cd WGCNAshiny
+
+## Method 1.
+
+Rscript WGCNAbyClick.v1.R
+
+## Method 2. open WGCNAbyClick.v1.R by Rstudio or other IDE you perfer and run this script.
 ```
 
-### `MSconvert (proteowizard)`
+**Download zip file and started from Rstudio**
 
-GUI for windows: [proteowizard](https://proteowizard.sourceforge.io/download.html)
+::: {#fig-start-pages layout-nrow="2"}
 
-Docker img for linux or mac os: [docker](https://hub.docker.com/r/chambm/pwiz-skyline-i-agree-to-the-vendor-licenses)
+![Github page](https://shawnmagic-1257599720.cos.ap-chengdu.myqcloud.com/picgopaste-E878B059.png){#fig-gitpage width="50%"}
 
-```r
-library(massconverter)
-docker_pull_pwiz()
-```
+![Shiny Script](https://shawnmagic-1257599720.cos.ap-chengdu.myqcloud.com/picgopaste-9FA8BCAD.png){#fig-gitpage width="50%"}
 
-### `HPC-tidymass` (for mac, linux or wsl users)
+![Run App](https://shawnmagic-1257599720.cos.ap-chengdu.myqcloud.com/picgopaste-F0179D86.png){#fig-gitpage width="50%"}
 
-```yaml
-##>  you can download this pipeline from github or just clone the repo to your server
-##>  1.0 clone the repo to your server
-git clone https://github.com/ShawnWx2019/HPC_tidymass.git
+![Web-page](https://shawnmagic-1257599720.cos.ap-chengdu.myqcloud.com/picgopaste-52ABF860.png){#fig-gitpage width="50%"}
 
-##> Run the initialization script to configure the runtime environment.
+getting started
+:::
 
-cd HPC_tidymass && chmod +x init.sh && bash init.sh
 
-##> test
-hpc-runTidymass -h
+## Method 2: Install from TBtools plugin store
 
-```
+Follow the following steps to install `RServer.plugin`, `MetMiner shinyapp` and `WGCNA shinyapp`
 
-### `MDAtookits`
+::: {#fig-TBtools-plugin layout-nrow="2"}
 
-**M**etabolomics **D**ownstream **A**nalysis Toolkits 
+![Find plugin store](https://shawnmagic-1257599720.cos.ap-chengdu.myqcloud.com/picgo202406071151087.png){#fig-step01 width="50%"}
 
-```r
-## install from github
-suppressMessages(if (!require('MDAtoolkits')) install_github(repo = "ShawnWx2019/MDAtoolkits",ref = 'master'))
-## two functions from another package called IMOtoolkits. will be intergreted with MDAtoolkits.
-suppressMessages(if (!require('IMOtoolkits')) install_github(repo = "ShawnWx2019/IMOtoolkits"))
-```
+![Install Rserver plugin](https://shawnmagic-1257599720.cos.ap-chengdu.myqcloud.com/picgo202406071149560.png){#fig-step02 width="50%"}
 
-### `WGCNA-shinyApp`
+![Download Rserver plugin](https://shawnmagic-1257599720.cos.ap-chengdu.myqcloud.com/picgo202406071152662.png){#fig-step03 width="50%"}
 
-follow the steps of [WGCNA-shinyapp readme file](https://github.com/ShawnWx2019/WGCNA-shinyApp/blob/main/README.md)
+![Install Rserver plugin](https://shawnmagic-1257599720.cos.ap-chengdu.myqcloud.com/picgo202406071159629.png){#fig-step04 width="50%"}
+
+Step by step TBtools plugin install
+:::
+
+Install `MetMiner shiny plugin` and `WGCNA shiny plugin` in same way.
+
+::: {#fig-wgcna-metMiner layout-nrow="1"}
+
+![start wgcna shinyapp](https://shawnmagic-1257599720.cos.ap-chengdu.myqcloud.com/picgo202406071212939.png){width="50%"}
+
+
+![start wgcna shinyapp](https://shawnmagic-1257599720.cos.ap-chengdu.myqcloud.com/picgo202406071212939.png){width="50%"}
+
+start shinyapps
+:::
+
+
+
+

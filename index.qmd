@@ -6,18 +6,20 @@ page-layout: full
 
 ### Project
 
-**MetMiner:** An Integrated Pipeline for Large-Scale Metabolomics Data Processing and Data Mining.
+**MetMiner:** A user-friendly pipeline for large-scale plant metabolomics data analysis.
 
 This is the documentation of **MetMiner**. You can get up-to-date verison from the GitHub repository <https://github.com/ShawnWx2019/MetMiner>.
 
-In this workflow, [tidyMass](https://www.tidymass.org/) @shenTidyMassObjectorientedReproducible2022b and [HPC-tidymass](https://github.com/ShawnWx2019/HPC_tidymass) takes on the majority of the upstream data analysis, data cleaning, and metabolite annotation tasks.
+In this pipeline, [tidyMass](https://www.tidymass.org/) @shen_tidymass_2022 take on the majority of the upstream data analysis, data cleaning, and metabolite annotation tasks.
 
 Furthermore, we have developed a Metabolomics Downstream Analysis toolkit [MDAtoolkits](https://github.com/ShawnWx2019/MDAtoolkits/tree/master) and a user-friendly [WGCNA Shiny app](https://github.com/ShawnWx2019/WGCNA-shinyApp). They are responsible for the downstream analysis and data mining section.
+
+The metMiner shiny app has been packaged into a [TBtools](https://github.com/CJ-Chen/TBtools-II) @chen_tbtools-ii_2023 plugin, which can be downloaded and installed through the TBtools plugin store. Thanks to TBtools for providing a convenient dependency resolution solution. 
 
 ### Citation
 
 If you have utilized MetMiner in your project, please cite:
 
-1.  Xiao Wang, Shuang Liang, Wenqi Yang, Bing Zhao, Ke Yu, Fei Liang, Luis A. J. Mur, Jeremy A, Roberts, Junli Zhang,and Xuebin Zhang. 2024 "MetMiner: An integrated pipeline for large-scale screening of regulators in plant metabolism."
+1.  Xiao Wang, Shuang Liang, Ke Yu, Wenqi Yang, Bing Zhao, Fei Liang, Xiang Zhu, Chao Zhou, Luis A. J. Mur, Jeremy A, Roberts, Junli Zhang,and Xuebin Zhang. 2024 "MetMiner: A user-friendly pipeline for large-scale plant metabolomics data analysis"
 
 2.  Shen, Xiaotao, Hong Yan, Chuchu Wang, Peng Gao, Caroline H. Johnson, and Michael P. Snyder. 2022. "TidyMass an Object-Oriented Reproducible Analysis Framework for LC Data." Nature Communications 13 (1): 4365. https://doi.org/10.1038/s41467-022-32155-w.
