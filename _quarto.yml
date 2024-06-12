@@ -47,8 +47,6 @@ website:
           text: Raw data summary
       - section: "Downstream data processing"
         contents:
-        - href: content/Downstream_method.qmd
-          text: Introduction
         - href: content/feature_anno.qmd
           text: Feature annotation
         - href: content/feature_dedup.qmd
