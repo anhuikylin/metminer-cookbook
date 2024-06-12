@@ -1,2 +1,10 @@
 # Project initiate
 
+1.  Set working directory.
+2.  Upload sample information file (must be a **.csv** file).
+3.  If there are changes in column names when preparing sample information, you can click the dropdown button to correspond to them.
+4.  Check sample information.
+
+If you have unfinished analyses,you need to upload the previously generated mass_dataset (.rda) files (both positive and negative model), and then select the steps you wish to continue with. The optional steps include **`Removing noisy features`**, **`Removing outliers`**, **`Imputing missing values`**, **`Normalization`**, **`Annotation`**,**`Annotation filtering`**,**`Data integrate`** and **`DAM and rest`**.
+
+[![](https://pic.imgdb.cn/item/66684334d9c307b7e910aad8.png)](https://pic.imgdb.cn/item/66684334d9c307b7e910aad8.png)
