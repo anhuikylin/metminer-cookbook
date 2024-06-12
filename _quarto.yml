@@ -43,8 +43,6 @@ website:
           text: Project initiate
         - href: content/Import_data.qmd
           text: Data import
-        - href: content/Data_ummary.qmd
-          text: Raw data summary
       - section: "Downstream data processing"
         contents:
         - href: content/Downstream_method.qmd
