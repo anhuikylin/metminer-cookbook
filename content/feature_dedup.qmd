@@ -2,4 +2,15 @@
 
 First, select hydrophilic interaction chromatography (HILIC) or reverse phase chromatography (RP), then choose the ion mode, and finally select the filtering method for annotation. For multiple annotations: you can choose to retain all, retain those with high scores, or retain the first annotation. For removing redundant annotations: you can choose to retain all or retain the first annotation. You can also filter annotations based on accuracy: you can choose to retain all or those with higher accuracy (1,2). After the parameters are set, click the **`Start annotation filtering`** button to filter annotations.
 
-[![](https://pic.imgdb.cn/item/663893550ea9cb14035fcdb3.png)](https://pic.imgdb.cn/item/663893550ea9cb14035fcdb3.png)
+[![](https://pic.imgdb.cn/item/66685fddd9c307b7e9351805.png)](https://pic.imgdb.cn/item/66685fddd9c307b7e9351805.png)
+
+### Data integration
+
+Set the method for integrating the data, then click the **`Start integration`** button to proceed with data integration. The result will generate an accumulation matrix, sample information, variable information, and integrated results of compound annotation, which you can download.
+
+[![](https://pic.imgdb.cn/item/6668615ed9c307b7e936da64.png)](https://pic.imgdb.cn/item/6668615ed9c307b7e936da64.png)
+
+Switch to the **`Figures`** tab, click the **`Start visualization`** button, adjust PCA grouping colors, and proceed with plotting. You can also set the image size, then click **`Download`** to download the image. Open the **`Interactive plot`** button, where you can view the 3D PCA plot, hover the mouse to see detailed sample information. Scroll down the page, at the bottom, you can see the sample correlation plot. You can adjust its colors, grouping, clustering, and more.
+
+[![](https://pic.imgdb.cn/item/666864ffd9c307b7e93bbe60.png)](https://pic.imgdb.cn/item/666864ffd9c307b7e93bbe60.png)
+
