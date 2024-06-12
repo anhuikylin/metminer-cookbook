@@ -1,0 +1,17 @@
+# Classification
+
+First, you need to prepare a table like this, set the parameters, then upload the file, and click the **`Start`** button. Click the **`show pie plot`** button, switch to the **`plot`** tab, and you can see the classification results.
+
+| variable_id       | Compound.name             | Lab.ID       |  
+|-------------------|---------------------------|--------------|  
+| M105T63_NEG       | Glyceric acid             | MONA_15722   |  
+| M111T107_NEG      | 2-Furancarboxylic acid    | NO07297      |  
+| M113T918_NEG      | Acetylenedicarboxylate    | C03248       |  
+| M115T64_NEG       | Maleic acid               | MONA_15797   |  
+| M115T96_NEG       | 3-Methyl-2-oxobutanoic acid | C00141       |  
+| M117T75_NEG       | Succinic acid             | NO07371      |
+
+[![](https://pic.imgdb.cn/item/66686974d9c307b7e9422ea3.png)](https://pic.imgdb.cn/item/66686974d9c307b7e9422ea3.png)
+
+[![](https://pic.imgdb.cn/item/66686b0cd9c307b7e9443584.png)](https://pic.imgdb.cn/item/66686b0cd9c307b7e9443584.png)
+
