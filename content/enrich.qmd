@@ -1,0 +1,5 @@
+# Enrichment
+
+First, in the Data_Export folder, locate the table_merge.xlsx file and save the sheet named annotation_table as a CSV file to use it as the annotation file. Click **`✓Start`**, switch to the **`Table`** tab, enter the metabolite ID, and click **`Start`** to obtain the Enrichment table. Switch to the **`Plot`** tab to visualize the enrichment results.
+
+[![](https://pic.imgdb.cn/item/66690f17d9c307b7e9ee514a.png)](https://pic.imgdb.cn/item/66690f17d9c307b7e9ee514a.png)
