@@ -1,1 +1,52 @@
-# Downstream Data Process  {.unnumbered}
+# Data import  {.unnumbered}
+
+### Upload MS file
+
+Click the dropdown button **`Import file`** and upload MS1, MS/MS files, as shown in the structure below. Click the **`1. Check input file`** button to check the data. After confirming correctness, click the **`2. Peak picking`** button for peak picking. This is a relatively lengthy process, and the progress bar will be displayed in the bottom right corner.
+
+[![](https://pic.imgdb.cn/item/666847eed9c307b7e9156494.png)](https://pic.imgdb.cn/item/666847eed9c307b7e9156494.png)
+
+
+### Data cleaning
+
+Data cleaning includes: **`Overview`**, **`Remove noisy features`**, **`Remove outliers`**, **`Missing value imputation`**, and **`Normalization`**.
+
+[![](https://pic.imgdb.cn/item/66684f96d9c307b7e91f3551.png)](https://pic.imgdb.cn/item/66684f96d9c307b7e91f3551.png)
+
+#### Overview
+
+First, upload sample information and set parameters, then **`Update sample information`**, click **`Start`**, and finally open the **`Interactive plot`** button to check for missing sample data.
+
+[![](https://pic.imgdb.cn/item/66685147d9c307b7e921463d.png)](https://pic.imgdb.cn/item/66685147d9c307b7e921463d.png)
+
+Open the interactive button, then hover the mouse over the image to see detailed information about the samples in the detailed image.
+
+[![](https://pic.imgdb.cn/item/66685281d9c307b7e922c693.png)](https://pic.imgdb.cn/item/66685281d9c307b7e922c693.png)
+
+#### Remove noisy features
+
+First, adjust the parameters for grouping, samples, and QC missing frequency on the left side, click **`Find noisy features`** to identify noisy features, and then click **`Remove and update`** to update the data.
+
+[![](https://pic.imgdb.cn/item/66684d74d9c307b7e91ca541.png)](https://pic.imgdb.cn/item/66684d74d9c307b7e91ca541.png)
+
+#### Remove outliers
+
+First, adjust the parameters on the left side, click **`Find outliers`** to identify outliers, open the **`Interactive plot`**, hover the mouse over the outlier sample to view outlier sample information, remove outlier values. Then switch to negative spectrum and repeat the operation, then click **`Remove and update`** to update the data.
+
+[![](https://pic.imgdb.cn/item/6668565ed9c307b7e927bfe8.png)](https://pic.imgdb.cn/item/6668565ed9c307b7e927bfe8.png)
+
+#### Missing value imputation
+
+Select the method for missing value imputation, such as: knn, rf, mean, median, zero, mininum, bpca, svdlmpute, ppca, etc., click **`Start`** to proceed with imputation.
+
+[![](https://pic.imgdb.cn/item/66685886d9c307b7e92b4767.png)](https://pic.imgdb.cn/item/66685886d9c307b7e92b4767.png)
+
+#### Data standardization
+
+First, adjust the method for filling missing values on the left side, such as svr, total, mean,median, pqn, loess ppca, etc., click **`Start normalization`** to standardize the data. Select PCA color grouping. Then click **`Visualize`** to visualize the data before and after normalization. Open the **`Interactive plot`** button, and you can see the 3D PCA plot. Hovering the mouse over it allows you to see detailed information about the samples. Finally, click the **`Export normalized data`** button to download the normalized data.
+
+[![](https://pic.imgdb.cn/item/66685bb6d9c307b7e92f72cf.png)](https://pic.imgdb.cn/item/66685bb6d9c307b7e92f72cf.png)
+
+
+[![](https://pic.imgdb.cn/item/663aeda60ea9cb1403dff9d3.png)](https://pic.imgdb.cn/item/663aeda60ea9cb1403dff9d3.png)
+
